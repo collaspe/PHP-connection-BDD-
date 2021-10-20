@@ -15,7 +15,6 @@ class Cdatabase
     private $utilisateur;
     private $motDePasse;
     private $adresseHote;
-    private $pdo;
 
     //Méthodes publiques 
     public function __construct($pAdresseHote, $pUtilisateur, $pMotDePasse, $pNomBaseDeDonnees)
