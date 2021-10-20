@@ -25,7 +25,7 @@
         <?php
         require ('Controller/Cdatabase.php');
         $bdd = new Cdatabase('localhost','root','','test');
-        $req = $bdd->recupererDonneesBdd();
+        $req = $bdd->recupererDonneesBdd('SELECT * FROM personnes');
         ?>
     </article>
     <article>

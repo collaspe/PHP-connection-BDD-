@@ -37,7 +37,16 @@ class Cdatabase
         }
     }
 
-    public function recupererDonneesBdd(){
-        $this->connection();
+    public function recupererDonneesBdd($pReq)
+    {
+        $conn = $this->connection();
+        $req  = $conn->query($pReq);
+        $row = array();
+        echo "<table>";
+        while ($row = $req->fetch_row()) {
+            for ($i = 0; $i < $req->field_count; $i++) {
+                echo "<p>$row[$i]<p>";
+            }
+        }
     }
 }
